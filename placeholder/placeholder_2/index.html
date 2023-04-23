@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <meta property="og:image" content="https://i.ibb.co/PrwqZb6/signup-iahbuenacosa-1.jpg" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@3.0.0/reset.min.css">
+    <link rel="stylesheet" href="../placeholder_2/style.css">
+</head>
+<body>
+    <main>
+		<!-- Header -->
+		<header class="d-flex justify-between">
+			<img src="https://i.ibb.co/tQdfThS/logo.png" alt="logo">
+			<img src="https://i.ibb.co/JnL44Fc/menu.png" alt="menu">
+		</header>
+		<!-- Main Container -->
+		<div class="d-flex w-100 justify-center align-center parallax">
+			<img src="https://i.ibb.co/9sM2rkV/stars-parallax.png" class="stars" alt="stars parallax">
+			<div class="container d-flex flex-col justify-center align-center">
+				<form action="/" method="post" id="signUp">
+					<fieldset class="form d-flex flex-col align-start">
+						<!-- Title -->
+						<div class="title d-flex align-center justify-center">
+							<legend><span>s</span><span>i</span><span>g</span><span>n</span> <span>u</span><span>p</span></legend>
+						</div>
+						<!-- Email -->
+						<div class="input-box w-100 d-flex">
+							<label for="email" class="d-flex align-center justify-center">
+								<img src="https://i.ibb.co/RBj7wKt/mail.png" alt="mail">
+							</label>
+							<input class="input-style w-100" id="email" type="email" placeholder="Email Address" required>
+						</div>
+						<!-- Password -->
+						<div class="input-box w-100 d-flex">
+							<label for="password" class="d-flex align-center justify-center">
+								<img src="https://i.ibb.co/sJR25cg/key.png" alt="password">
+							</label>
+							<input class="input-style w-100" type="password" id="password" placeholder="Password" required>
+						</div>
+						<!-- First Name -->
+						<div class="input-box w-100 d-flex">
+							<label for="firstName" class="d-flex align-center justify-center">
+								<img src="https://i.ibb.co/1LQdnLC/id.png" alt="firstName">
+							</label>
+							<input class="input-style w-100" type="text" id="firstName" placeholder="First Name" required>
+						</div>
+						<!-- Last Name -->
+						<div class="input-box w-100 d-flex">
+							<label for="lastName" class="d-flex align-center justify-center">
+								<img src="https://i.ibb.co/1LQdnLC/id.png" alt="lastName">
+							</label>
+							<input class="input-style w-100" type="text" id="lastName" placeholder="Last Name" required>
+						</div>
+						<!-- Province -->
+						<div class="input-box w-100 d-flex">
+							<label for="province" class="d-flex align-center justify-center">
+								<img src="https://i.ibb.co/rfDJsfK/location.png" alt="province">
+							</label>
+							<select name="province" id="province" class="font input-style w-100" required>
+								<option value="alberta">Alberta</option>
+								<option value="britishColumbia">British Columbia</option>
+								<option value="manitoba">Manitoba</option>
+								<option value="newBrunswick">New Brunswick</option>
+								<option value="newfoundlandAndLabrador">Newfoundland and Labrador</option>
+								<option value="northwestTerritories">Northwest Territories</option>
+								<option value="novaScotia">Nova Scotia</option>
+								<option value="nunavut">Nunavut</option>
+								<option value="ontario">Ontario</option>
+								<option value="princeEdwardIsland">Prince Edward Island</option>
+								<option value="quebec">Quebec</option>
+								<option value="saskatchewan">Saskatchewan</option>
+								<option value="yukon">Yukon</option>
+							</select>
+						</div>
+						<!-- Subscribe -->
+						<label for="subscribe" class="subscribe d-flex w-100">
+							<input type="checkbox" id="subscribe" name="subscribe">
+							<span>Subscribe to Newsletter</span>
+						</label>
+						<!-- Login Link and Submit -->
+						<div class="d-flex justify-between align-center w-100 bottom">
+							<div><span>Already a user?</span><a href="/login" class="login">Login</a></div>
+							<button type="submit" form="signUp" value="Submit">Submit</button>
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</div>
+	</main>
+</body>
+</html>

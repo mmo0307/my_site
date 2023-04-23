@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background: #1a1a1a;
+  }
+  .item:before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #0d0d0d;
+    border: 2px solid #fff;
+    top: 0;
+    left: 0;
+  }
+  .item__content {
+    transform: translate(-5%, -5%);
+    transition: transform 0.2s;
+  }
+  .item__content:hover {
+    transform: translate(0, 0);
+  }
+  

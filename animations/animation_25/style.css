@@ -1,0 +1,94 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #131419; }
+
+* {
+    box-sizing: border-box; }
+
+svg.bull {
+    margin-top: -20px;
+    transform: scale(3); }
+svg.bull path {
+    stroke: #4EBE96;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform-origin: center;
+    transition: all .6s ease; }
+svg.bull path.zz {
+    transform: translateY(2px) scale(0);
+    transition: all .4s ease;
+    opacity: 0;
+    animation: none; }
+svg.bull path.horns {
+    stroke-dasharray: 12.5,0;
+    stroke-dashoffset: 0;
+    transition: all .4s ease; }
+svg.bull path.eyes {
+    transform: scale(1);
+    opacity: 1; }
+
+.ws {
+    position: absolute;
+    margin-top: 170px;
+    font-family: "Inter", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #868F97;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    min-width: 124px;
+    text-align: center;
+    background: rgba(78, 190, 150, 0.1);
+    transition: all 0.2s ease; }
+
+.ws:before {
+    content: "Market Open";
+    color: #4EBE96; }
+.ws:active {
+    transform: scale(0.94); }
+
+#ws {
+    position: fixed;
+    opacity: 0;
+    visibility: hidden; }
+#ws:checked + .ws {
+    background: rgba(216, 79, 104, 0.1); }
+#ws:checked + .ws:before {
+    content: "Market Closed";
+    color: #D84F68; }
+#ws:checked + .ws + svg.bull path {
+    stroke: #D84F68; }
+#ws:checked + .ws + svg.bull path.zz {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+    animation: zz 4s linear infinite;
+    animation-delay: .4s; }
+#ws:checked + .ws + svg.bull path.horns {
+    stroke-dasharray: 12;
+    stroke-dashoffset: 6; }
+#ws:checked + .ws + svg.bull path.eyes {
+    transform: scale(0.9);
+    opacity: 0; }
+
+@keyframes zz {
+    0% {
+        transform: translateY(0); }
+    50% {
+        transform: translateY(-1px); }
+    100% {
+        transform: translateY(0); } }
+
+.fey {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    transform: translate3d(0, 0, 0);
+    transition: all .3s ease; }
+.fey:hover {
+    transform: rotate(4deg) scale(0.94); }

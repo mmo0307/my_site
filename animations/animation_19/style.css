@@ -1,0 +1,191 @@
+body, html {
+    width: 100%;
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, h3, h4, h5, h6, p, button {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    letter-spacing: 0.25px;
+}
+.content {
+    position: relative;
+    width: 330px;
+    background-color: #181a27;
+    border-radius: 15px;
+}
+.content.collapsed {
+    animation: collapse 0.3s linear forwards;
+}
+.content.collapsed .bottom-bar {
+    animation: bottom-bar-collapse 0.3s linear forwards;
+    height: 15px;
+}
+.content.collapsed button {
+    transition: 0.2s;
+    opacity: 0;
+    cursor: default;
+}
+.content.collapsed .bottom-bar span {
+    opacity: 1;
+}
+.content.collapsed .bottom-bar svg {
+    opacity: 0;
+}
+.content.expanded {
+    animation: expand 0.3s linear forwards;
+}
+.content.expanded .bottom-bar {
+    height: 30px;
+    animation: bottom-bar-expand 0.3s linear forwards;
+}
+.content.expanded button {
+    transition: 1s;
+    opacity: 1;
+}
+.content.expanded .bottom-bar span {
+    opacity: 0;
+}
+.content.expanded .bottom-bar svg {
+    opacity: 1;
+}
+.top {
+    text-align: center;
+    flex-direction: column;
+}
+.top svg.graph {
+    height: 50px;
+    -webkit-filter: drop-shadow(0px 0px 10px rgba(142, 215, 52, 1));
+    filter: drop-shadow(0px 0px 3px rgba(142, 215, 52, 1));
+}
+.top svg.graph pollyfill {
+    stroke: #8ed734;
+}
+.top .bitcoin-icon, .top .info {
+    float: left;
+    padding: 10px 10px 0px 10px;
+    margin-top: 10px;
+    vertical-align: middle;
+    text-align: left;
+}
+.top .bitcoin-icon {
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 50%;
+    margin: 20px 0px 0px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+.top .bitcoin-icon svg {
+    width: 22px;
+}
+.top .info {
+    vertical-align: middle;
+}
+.top .info h3 {
+    color: #ff9500;
+    font-size: 14px;
+    font-weight: 500;
+}
+.top .info p {
+    color: white;
+    font-size: 18px;
+    vertical-align: middle;
+}
+.top .info svg {
+    vertical-align: middle;
+    width: 24px;
+}
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.middle button {
+    width: 140px;
+    height: 45px;
+    margin: 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, .8);
+    font-size: 14px;
+    cursor: pointer;
+}
+.middle button.buy {
+    color: #8ed734;
+}
+.middle button.sell {
+    color: #da4a4a;
+}
+.middle button:focus {
+    outline: none;
+}
+.middle button:active {
+    transform: scale(0.8);
+}
+.bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    cursor: pointer;
+}
+.bottom-bar span {
+    border: 1px solid #747d9c;
+    width: 20px;
+    height: 0px;
+    display: block;
+    position: absolute;
+    transition: 0.3s;
+}
+.bottom-bar svg {
+    transition: 0.3s;
+    width: 30px;
+}
+.bottom-bar path {
+    fill: #747d9c;
+    position: absolute;
+}
+@keyframes expand {
+    0% {
+        height: 145px;
+   }
+    100% {
+        height: 240px;
+   }
+}
+@keyframes bottom-bar-expand {
+    0% {
+        height: 15px;
+   }
+    100% {
+        height: 30px;
+   }
+}
+@keyframes collapse {
+    0% {
+        height: 240px;
+   }
+    100% {
+        height: 145px;
+   }
+}
+@keyframes bottom-bar-collapse {
+    0% {
+        height: 30px;
+   }
+    100% {
+        height: 15px;
+   }
+}
